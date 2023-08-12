@@ -1,6 +1,7 @@
 import pandas as pd
 import ast
 import json
+import re
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -27,8 +28,6 @@ compare_counts = df['compare'].value_counts() # check matched or unmatched in co
 #  DataFrame to CSV
 df.to_csv('your_data.csv', index=False, escapechar='\\')
 
-import seaborn as sns
-import matplotlib.pyplot as plt
 df = pd.read_csv('your_data.csv') # load csv
 
 # pivot table with 'compare'
@@ -80,7 +79,6 @@ plt.ylabel('Count')
 
 plt.show()
 
-
 df = pd.read_csv('your_data.csv')
 
 compare_counts = df['compare'].value_counts()
@@ -90,7 +88,6 @@ plt.xlabel('State')
 plt.ylabel('Frequency')
 plt.show
 
-import re
 from random import sample
 
 #filter subset of data
@@ -101,32 +98,3 @@ subset_df = pd.concat([matched_samples,unmatched_samples])
 
 # CSV
 subset_df.to_csv('subset_data.csv', index=False, escapechar = '\\')
-
-import pandas as pd
-import ast
-import json
-import re
-
-# JSON data
-with open('test.contracts.json') as f:
-    data = json.load(f)
-
-# JSON data to DataFrame
-df = pd.DataFrame(data)
-
-df = pd.concat([df.drop(['FT'], axis=1), df['FT'].apply(pd.Series)], axis=1)
-df['value'] = df['value'].str.strip()  # remove redundant text
-
-# Remove redundant in 'keywords' column
-df['keywords'] = df['keywords'].apply(lambda x: re.sub(r'\b(\w+)(?:\W+\1\b)+', r'\1', x))
-
-# Remove 'text' words
-df['keywords'] = df['keywords'].apply(lambda x: re.sub(r'\btext\b', '', x))
-
-df['keywords'] = df['keywords'].str.replace(r'\bnone\b', '', case=False, regex=True)
-
-# Transform 'compare' column values
-df.loc[:, 'compare'] = df['compare'].replace({'equal': 'matched', 'less': 'unmatched', 'more': 'unmatched'})
-
-# DataFrame to CSV
-df.to_csv('your_data_two.csv', index=False, escapechar='\\')
