@@ -64,8 +64,6 @@ df['compare'] = df['compare'].replace({'equal': 'matched', 'less': 'unmatched', 
 # DataFrame to CSV
 df.to_csv('your_data.csv', index=False, escapechar='\\')
 
-import seaborn as sns
-import matplotlib.pyplot as plt
 df = pd.read_csv('your_data.csv') # load csv
 
 # pivot table with 'compare'
