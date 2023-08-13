@@ -15,6 +15,4 @@ Feel free to explore the different directories within this repository to gain in
 
 ## Contact Information
 
-If you have any questions, feedback, or opportunities for collaboration, please don't hesitate to reach out to me. 
-
 Thank you for visiting my Python repository, and I hope the content here provides you with valuable insights into my journey in data science.
