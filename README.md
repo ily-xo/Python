@@ -3,4 +3,4 @@ Welcome to My Python Repository, a compilation of projects that reflect my journ
 
 ## About the Data 8 Course
 
-The [Data 8](http://www.data8.org/) course offered by UC Berkeley is designed to provide a solid foundation in data science principles and practices. Throughout the course, I have delved into fundamental concepts related to data manipulation, visualization, statistical analysis, and more. 
+The [Data 8](http://www.data8.org/) course offered by UC Berkeley is designed to provide a solid foundation in data science principles and practices.
