@@ -12,7 +12,3 @@ From data preprocessing and analysis to visualization and modeling, I am set on 
 ## How to Navigate
 
 Feel free to explore the different directories within this repository to gain insights into various data science topics and methodologies. 
-
-## Contact Information
-
-Thank you for visiting my Python repository, and I hope the content here provides you with valuable insights into my journey in data science.
