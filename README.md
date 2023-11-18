@@ -20,7 +20,3 @@ Optimized Parameters for XGBoost Classifier:
 
 Utilized RandomizedSearchCV to fine-tune the hyperparameters of the XGBoost classification model.
 Conducted a thorough search across the hyperparameter space, considering factors such as subsample, number of estimators, maximum depth, learning rate, and colsample_bytree.
-
-- Created visualizations, including bar plots and confusion matrices, to interpret and communicate model performance effectively.
-- Collaborated with cross-functional teams to integrate machine learning models into the decision-making process, providing actionable insights.
-- Documented and presented findings, methodologies, and results in a clear and concise manner, facilitating team understanding and decision-making.
