@@ -28,7 +28,7 @@ def steps_run(p, iterations):
         individual_stress = m_stress(p) / (21 * 10)
     return individual_stress, p
 
-# Generating all possible pairs of sports excluding same sports or duplicate pair from the CSV
+# All possible pairs of sports excluding duplicates from the CSV
 def pairing_gen(names):
     paired_names = []
     for row in range(0, 21):
@@ -37,7 +37,7 @@ def pairing_gen(names):
                 paired_names.append([names[row], names[col]])
     return paired_names
 
-# Generating the pairwise distances for psychological dist & mds dist
+# Pairwise distances for psychological dist & mds dist
 def pair_w_distances(distances, p):
     psychological_distances = []
     mds_distances = []
@@ -48,7 +48,7 @@ def pair_w_distances(distances, p):
                 mds_distances.append(m_dist(p[row], p[col]))
     return psychological_distances, mds_distances
 
-# Generate positions 
+# positions 
 def generating_positions(N, D):
     positions = np.zeros((N, D))
     for i in range(N):
